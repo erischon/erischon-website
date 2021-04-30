@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("../assets/img/erischon-bg-hp-1.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.header-title {
+    font-size: 4.5rem;
+    color: #ffffff;
+}
