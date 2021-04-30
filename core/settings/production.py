@@ -8,7 +8,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = ['167.71.39.195', 'www.erischon.dev', 'erischon.dev']
+ALLOWED_HOSTS = ['www.erischon.dev', 'erischon.dev']
 
 DATABASES = {
     'default': {
