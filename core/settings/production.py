@@ -7,7 +7,7 @@ from sentry_sdk.integrations.django import DjangoIntegration
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = os.getenv('167.71.39.195')
+ALLOWED_HOSTS = ['167.71.39.195']
 
 DATABASES = {
     'default': {
