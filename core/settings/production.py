@@ -8,7 +8,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = ['www.erischon.dev', 'erischon.dev', '127.0.0.1', '167.71.39.195', '62.171.165.6']
+ALLOWED_HOSTS = ['www.erischon.dev', 'erischon.dev', '167.71.39.195']
 
 DATABASES = {
     'default': {
@@ -22,16 +22,16 @@ DATABASES = {
 }
 
 
-sentry_sdk.init(
-    dsn="https://17e5b37213464b05a42d9f2171116080@o570822.ingest.sentry.io/5741629",
-    integrations=[DjangoIntegration()],
+# sentry_sdk.init(
+#     dsn="https://17e5b37213464b05a42d9f2171116080@o570822.ingest.sentry.io/5741629",
+#     integrations=[DjangoIntegration()],
 
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
-    # We recommend adjusting this value in production.
-    traces_sample_rate=1.0,
+#     # Set traces_sample_rate to 1.0 to capture 100%
+#     # of transactions for performance monitoring.
+#     # We recommend adjusting this value in production.
+#     traces_sample_rate=1.0,
 
-    # If you wish to associate users to errors (assuming you are using
-    # django.contrib.auth) you may enable sending PII data.
-    send_default_pii=True
-)
+#     # If you wish to associate users to errors (assuming you are using
+#     # django.contrib.auth) you may enable sending PII data.
+#     send_default_pii=True
+# )
