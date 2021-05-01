@@ -1,6 +1,6 @@
 from . import *
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "password123")
+SECRET_KEY = ("change_me")
 DEBUG = True
 
 DATABASES = {
