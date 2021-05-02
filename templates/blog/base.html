@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <div id="sidebar">
+    <h2>Mon Blog</h2>
+    <p>Mes histoires...</p>
+  </div>
+
+  <!-- Le Footer -->
+  <footer>
+    <div><a href="http://www.erischon.dev">© 2021 Eric Schön</a></div>
+  </footer>
+
+</body>
+
+</html>
