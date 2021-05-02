@@ -4,8 +4,28 @@
 <html>
 
 <head>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
+
   <title>{% block title %}{% endblock %}</title>
-  <link href="{% static "css/blog.css" %}" rel="stylesheet">
+  
+  <meta name="description" property="og:description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="{{ post.author }}">
+
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
+
+  <meta name="twitter:image" content="" />
+  <meta property="twitter:image:alt" content="" />
+  <meta name="twitter:card" content="" />
+  <meta name="twitter:site" content="" />
+  
 </head>
 
 <body>
