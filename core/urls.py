@@ -7,6 +7,7 @@ urlpatterns = [
     path('', include('website.urls')),
     # Blog
     path('blog/', include('blog.urls', namespace='blog')),
+    path('portfolio/', include('portfolio.urls', namespace='portfolio')),
     # Other
     path('tinymce/', include('tinymce.urls')),
 ]
