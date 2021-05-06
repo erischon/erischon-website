@@ -3,47 +3,67 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="{% static 'website/css/sass.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap">
-  <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="{{ post.author }}">
 
-  <title>{% block title %}{% endblock %}</title>
-  
-  <meta name="description" property="og:description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="{{ post.author }}">
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-  <meta property="og:url" content="" />
-  <meta property="og:title" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:image:alt" content="" />
+    <meta name="twitter:image" content="" />
+    <meta property="twitter:image:alt" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    
+  </head>
 
-  <meta name="twitter:image" content="" />
-  <meta property="twitter:image:alt" content="" />
-  <meta name="twitter:card" content="" />
-  <meta name="twitter:site" content="" />
-  
-</head>
+  <body>
 
-<body>
-  <div id="content">
-    {% block content %}
-    {% endblock %}
-  </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light p-3" style="background: #16e0bd;">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+          <img src="{% static '/website/assets/img/logo-esme-fff-2.png' %}" alt="">
+          </a>
 
-  <div id="sidebar">
-    <h2>Mon Blog</h2>
-    <p>Mes histoires...</p>
-  </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+            </ul>
+          </div>
+          </div>
+      </nav>
+    </header>
+    
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
 
-  <!-- Le Footer -->
-  <footer>
-    <div><a href="http://www.erischon.dev">© 2021 Eric Schön</a></div>
-  </footer>
+    <div id="sidebar">
+      <h2>Mon Blog</h2>
+      <p>Mes histoires...</p>
+    </div>
 
-</body>
+    <!-- Le Footer -->
+    <footer>
+      <div><a href="http://www.erischon.dev">© 2021 Eric Schön</a></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
 
 </html>

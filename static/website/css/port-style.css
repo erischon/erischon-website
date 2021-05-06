@@ -476,3 +476,16 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Blog */
+
+.blog-container__detail {
+    margin: auto;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .blog-container__detail {
+        width: 50%;
+    }
+}
