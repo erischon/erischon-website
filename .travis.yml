@@ -10,15 +10,15 @@ env: DJANGO_SETTINGS_MODULE="core.settings.travis"
 services:
   - postgresql
 
-script:
-  - python manage.py test
-
-dist: xenial
-
 addons:
   chrome: stable
+  apt:
+    packages:
+      - chromium-chromedriver
 
 before_install:
-  - # start your web application and listen on `localhost`
+  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-  ⋮
+
+script:
+  - python manage.py test
