@@ -12,3 +12,6 @@ services:
 
 script:
   - python manage.py test
+
+addons:
+  chrome: stable
