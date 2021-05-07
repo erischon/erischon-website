@@ -4,29 +4,19 @@
 
 {% block content %}
 
-  <div class="container-lg border px-5">
+  <section class="">
+    <h1>{{ post.title }}</h1>
+    <p class="date">
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+  </section>
 
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <section class="">
-          <h1>{{ post.title }}</h1>
-          <p class="date">
-            Published {{ post.publish }} by {{ post.author }}
-          </p>
-        </section>
+  <section class="section__body">
+    {{ post.body|safe }}
+  </section>
 
-    <section class="section__body">
-      {{ post.body|safe }}
-    </section>
+  <section>
 
-    <section>
-
-    </section>
-    <div class="col-lg-2"></div>
-  </div>
-</div>
-
-  </div>
+  </section>
 
 {% endblock %}

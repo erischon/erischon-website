@@ -6,9 +6,13 @@
   <head>
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap">
-    <link rel="stylesheet" href="{% static 'website/css/sass.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;900&family=Source+Sans+Pro:wght@300;400;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
 
     <title>{% block title %}{% endblock %}</title>
     
@@ -31,32 +35,41 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light p-3" style="background: #16e0bd;">
+      <nav class="navbar navbar-expand-lg navbar-light p-2" style="background: #16e0bd;">
         <div class="container-fluid">
           <a href="#" class="navbar-brand">
-          <img src="{% static '/website/assets/img/logo-esme-fff-2.png' %}" alt="">
+          <img src="{% static '/website/assets/img/logo-esme-fff-2.png' %}" width="30em" alt="">
           </a>
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'portfolio:portfolio-hp' %}">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'blog:post_list' %}">Blog</a></li>
             </ul>
           </div>
           </div>
       </nav>
     </header>
     
-    <div id="content">
-      {% block content %}
-      {% endblock %}
+    <div class="container-lg border px-5">
+      <div class="row">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-8 border border-5">
+          {% block content %}
+          {% endblock %}
+        </div>
+
+        <div class="col-lg-2  border border-5">
+          {% include "blog/sidebar.html" %}
+        </div>
+
+        <div class="col-lg-1"></div>
+      </div>
     </div>
 
-    <div id="sidebar">
-      <h2>Mon Blog</h2>
-      <p>Mes histoires...</p>
-    </div>
+
 
     <!-- Le Footer -->
     <footer>
@@ -65,5 +78,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   </body>
-
 </html>

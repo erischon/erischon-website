@@ -489,3 +489,38 @@ header {
         width: 50%;
     }
 }
+
+
+
+
+/* ============================ */
+/* ========  Navbar  ========== */
+/* ============================ */
+
+.topnav {
+    background-color: var(--clr-accent);
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .topnav a {
+    float: left;
+    color: var(--clr-dark);
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .topnav a:hover {
+    background-color: var(--clr-light);
+    font-size: 1rem;
+
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
