@@ -4,8 +4,10 @@
 
 {% block content %}
 
+<img src="{{ post.img_post.url }}" width="100%" alt="">
+
   <section class="">
-    <h1>{{ post.title }}</h1>
+    <h1 class="strong">{{ post.title }}</h1>
     <p class="date">
       Published {{ post.publish }} by {{ post.author }}
     </p>

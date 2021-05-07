@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from core import settings
 
 
 urlpatterns = [
@@ -10,4 +12,4 @@ urlpatterns = [
     path('portfolio/', include('portfolio.urls', namespace='portfolio')),
     # Other
     path('tinymce/', include('tinymce.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

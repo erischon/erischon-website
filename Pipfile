@@ -11,6 +11,7 @@ sentry-sdk = "*"
 flake8 = "*"
 django-tinymce = "*"
 selenium = "*"
+pillow = "*"
 
 [dev-packages]
 

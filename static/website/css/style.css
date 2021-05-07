@@ -1,9 +1,11 @@
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-secondary: 'Montserrat', sans-serif;
+    ;
+    /* --ff-secondary: 'Martel Sans', sans-serif; */
     
     --fw-reg: 400;
-    --fw-bold: 900;
+    --fw-bold: 800;
     
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -18,4 +20,14 @@
 
 body, html {
   font-family: var(--ff-primary);
+}
+
+.strong {
+  font-weight: var(--fw-bold);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-secondary);
 }
