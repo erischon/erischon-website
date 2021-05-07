@@ -12,6 +12,9 @@ services:
 
 addons:
   chrome: stable
+  apt:
+    packages:
+      - chromium-chromedriver
 
 before_install:
   - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
