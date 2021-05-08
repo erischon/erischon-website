@@ -8,10 +8,10 @@
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-secondary: 'Montserrat', sans-serif;
     
-    --fw-reg: 300;
-    --fw-bold: 900;
+    --fw-reg: 400;
+    --fw-bold: 800;
     
     --clr-light: #fff;
     --clr-dark: #303030;
