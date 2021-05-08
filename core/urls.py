@@ -9,7 +9,7 @@ urlpatterns = [
     path('', include('website.urls')),
     # Blog
     path('blog/', include('blog.urls', namespace='blog')),
-    path('portfolio/', include('portfolio.urls', namespace='portfolio')),
+    path('portfolio/', include('portfolio.urls')),
     # Other
     path('tinymce/', include('tinymce.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
