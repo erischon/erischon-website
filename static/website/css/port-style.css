@@ -15,7 +15,7 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #1BBE97;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -122,6 +122,7 @@ h3 { font-size: var(--fs-h3) }
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
+    color: var(--clr-light);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -390,8 +391,8 @@ header {
 }
 
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
 }
 
 .portfolio__item {
@@ -524,3 +525,83 @@ header {
     background-color: #04AA6D;
     color: white;
   }
+
+
+
+
+/* Works Card */
+
+  .container {
+    background: #383A45;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 270px;
+}
+
+p.title {
+    color: var(--clr-light);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    line-height: 119.7%;
+}
+
+p.description {
+    color: var(--clr-light);
+    font-size: var(--fs-body);
+}
+
+.link {
+    width: .8rem;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* background-color: var(--clr-dark); */
+    /* border: 1px solid #54576b; */
+    display: block;
+    color: var(--clr-accent);
+    padding: 0.3em 0.8em;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 1em;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-right: 1em;
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .container {
+        max-width: 700px;
+        display: flex;
+    }
+
+    .techno-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photo {
+        /* width: 18em; */
+        width: 50%;
+        margin-right: 1rem;
+        border: 1px solid #000;
+    }
+    
+}
