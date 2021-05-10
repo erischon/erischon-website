@@ -1,7 +1,20 @@
-{% load static %}
+{% extends "portfolio/base.html" %} {% load static %}
 
-<h1>{{ project.title }}</h1>
+{% block content %}
 
 
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                <strong>{{ project.title }}</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">{{ project.description }}</p>
+            <img src="{{ project.image.url }}" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
 
-<img src="{{ project.image.url }}" alt="" width="250em">
+        </div>
+        
+        
+
+{% endblock %}

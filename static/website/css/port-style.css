@@ -7,15 +7,18 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-primary:  'Nunito Sans', sans-serif;
     --ff-secondary: 'Montserrat', sans-serif;
     
-    --fw-reg: 400;
-    --fw-bold: 800;
+    --fw-reg: 300;
+    --fw-bold: 700;
     
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #1BBE97;
+    --clr-dark: #121212;
+    --clr-dark-overlay: #2D2D2D;
+    --clr-primary: #BB86FC;
+    --clr-secondary: #03DAC5;
+    --clr-accent: #03DAC5;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -44,8 +47,8 @@
 
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -121,8 +124,8 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr-accent);
-    color: var(--clr-light);
+    background: var(--clr-secondary);
+    color: var(--clr-dark);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -295,7 +298,7 @@ header {
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-dark-overlay);
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
     /* background-blend-mode: multiply; */
@@ -385,37 +388,108 @@ header {
 /* My Work */
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
     text-align: center;    
 }
 
 .portfolio {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.portfolio__item {
-    background: var(--clr-accent);
-    overflow: hidden;
+/* Works Cards */
+
+.card-container {
+    background: var(--clr-dark-overlay);
+    margin: 0.75em 0;
+    padding: 0.6em;
+    max-width: 350px;
 }
 
-.portfolio__img {
-    transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
+.card-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 2em;
 }
 
-.portfolio__item:focus {
-    position: relative;
-    z-index: 2;
+p.title {
+    color: var(--clr-light);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    line-height: 119.7%;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .5;
+p.description {
+    color: var(--clr-light);
+    font-size: var(--fs-body);
 }
+
+.techno-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.techno-item {
+    display: block;
+    color: var(--clr-accent);
+    padding: 0.3em 0.6em;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.6em;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.btn {
+    margin-right: 1em;
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .card-container {
+        max-width: 800px;
+        display: flex;
+    }
+
+    .techno-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photo {
+        /* width: 18em; */
+        width: 50%;
+        margin-right: 1rem;
+        border: 1px solid var(--clr-dark);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
@@ -464,19 +538,7 @@ header {
 }
 
 
-/* Individual portfolio item styles */
 
-.portfolio-item-individual {
-    padding: 0 2em 2em;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.portfolio-item-individual p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Blog */
 
@@ -526,82 +588,3 @@ header {
     color: white;
   }
 
-
-
-
-/* Works Card */
-
-  .container {
-    background: #383A45;
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 270px;
-}
-
-p.title {
-    color: var(--clr-light);
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-h3);
-    line-height: 119.7%;
-}
-
-p.description {
-    color: var(--clr-light);
-    font-size: var(--fs-body);
-}
-
-.link {
-    width: .8rem;
-}
-
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    /* background-color: var(--clr-dark); */
-    /* border: 1px solid #54576b; */
-    display: block;
-    color: var(--clr-accent);
-    padding: 0.3em 0.8em;
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-right: 1em;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-}
-
-.btn {
-    margin-right: 1em;
-}
-
-
-@media only screen and (min-width: 800px) {
-    
-    .container {
-        max-width: 700px;
-        display: flex;
-    }
-
-    .techno-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .photo {
-        /* width: 18em; */
-        width: 50%;
-        margin-right: 1rem;
-        border: 1px solid #000;
-    }
-    
-}

@@ -12,7 +12,7 @@ class Project(models.Model):
     title = models.CharField(max_length=250)
     description = models.CharField(max_length=150)
     detail = models.TextField()
-    image = models.ImageField(upload_to='blog/')
+    image = models.ImageField(upload_to='portfolio/')
     url_project = models.CharField(max_length=250)
     url_git = models.CharField(max_length=250)
     techno = models.ManyToManyField(Techno)
