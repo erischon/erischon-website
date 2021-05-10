@@ -1,20 +1,94 @@
-{% load static %}
+{% extends "portfolio/base.html" %} {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block seo %}
+
     <title>Eri Schön - Portfolio</title>
-</head>
-<body>
+    
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="{{ post.author }}">
 
-{% for project in projects %}
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-<a href="{% url 'project-detail' project.id %}">{{ project.title }}</a>
+    <meta name="twitter:image" content="" />
+    <meta property="twitter:image:alt" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
 
-{% endfor %}
+{% endblock %}
+
+{% block content %}
+
+    <section class="intro">
+        <h1 class="section__title intro__title">
+            Bonjour, je suis <strong>Eri Schön</strong>
+        </h1>
+        <p class="intro__subtitle">Développeur Web Backend</p>
+        <img src="{% static '/Website/assets/img/erischon_a.png' %}" alt="a picture of Eri Schön" class="intro__img">
+    </section>
+
+    <section class="what-i-do">
+        <h1></h1>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <button></button>
+
+    </section>
+
+    <section class="about">
+        <div class="about__title">
+            <h2></h2>
+        </div>
+        <div class="about__subtitle">
+            <h3></h3>
+        </div>
+        <div class="about__content">
+            <p></p>
+        </div>
+        <div class="about__photo">
+            <img src="" alt="">
+        </div>
+    </section>
+
+    <section class="works">
+
+        {% for project in projects %}
+
+        <a href="{% url 'project-detail' project.id %}">{{ project.title }}</a>
+
+        {% endfor %}
+
+    </section>
+
+    <section class="contact">
+        <a href="mailto:contact@erischon.dev" class="footer__link">contact@erischon.dev</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/ericschonhofen/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com/EriSchon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/erischon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+{% endblock %}
 
 
 </body>

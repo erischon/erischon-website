@@ -10,8 +10,9 @@ class Techno(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=250)
-    description = models.TextField()
-    image = models.ImageField(null=True, blank=True, upload_to='blog/')
+    description = models.CharField(max_length=150)
+    detail = models.TextField()
+    image = models.ImageField(upload_to='blog/')
     url_project = models.CharField(max_length=250)
     url_git = models.CharField(max_length=250)
     techno = models.ManyToManyField(Techno)

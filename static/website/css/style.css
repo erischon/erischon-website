@@ -1,11 +1,11 @@
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-primary: 'Nunito Sans', sans-serif;
     --ff-secondary: 'Montserrat', sans-serif;
     ;
     /* --ff-secondary: 'Martel Sans', sans-serif; */
     
-    --fw-reg: 400;
-    --fw-bold: 800;
+    --fw-reg: 300;
+    --fw-bold: 700;
     
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -20,14 +20,54 @@
 
 body, html {
   font-family: var(--ff-primary);
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+
 }
 
-.strong {
+a {
+  color: var(--clr-accent);
+}
+
+strong {
   font-weight: var(--fw-bold);
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--ff-secondary);
 }
+
+/* Sections */
+
+.section__title {
+  margin-bottom: .25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  padding: .25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+}
+
+
+
