@@ -12,8 +12,17 @@
         </section>
         
         <div class="portfolio-item-individual">
-
+            <p>{{ project.detail | safe}}</p>
         </div>
+
+        <section class="project-techno">
+            <ul>
+                {% for techno in project.techno.all %}
+                <li>{{ techno }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
         
         
 
