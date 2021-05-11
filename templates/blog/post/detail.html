@@ -1,10 +1,24 @@
 {% extends "blog/base.html" %}
+
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
-  <p class="date">
-    Published {{ post.publish }} by {{ post.author }}
-  </p>
-  {{ post.body|safe }}
+
+<img src="{{ post.img_post.url }}" width="100%" alt="">
+
+  <section class="">
+    <h1 class="strong">{{ post.title }}</h1>
+    <p class="date">
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+  </section>
+
+  <section class="section__body">
+    {{ post.body|safe }}
+  </section>
+
+  <section>
+
+  </section>
+
 {% endblock %}

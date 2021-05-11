@@ -1,0 +1,19 @@
+{
+  "name": "erischon-website",
+  "version": "1.0.0",
+  "description": "My Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erischon/erischon-website.git"
+  },
+  "author": "Eri Schön",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erischon/erischon-website/issues"
+  },
+  "homepage": "https://github.com/erischon/erischon-website#readme"
+}
