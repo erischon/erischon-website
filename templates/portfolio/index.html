@@ -28,13 +28,13 @@
                 Bonjour, je suis <strong>Eri Schön</strong>
             </h1>
             <p class="section__subtitle section__subtitle--intro">Développeur Web Backend</p>
-            <img src="{% static '/Website/assets/img/erischon_a.png' %}" alt="a picture of Eri Schön" class="intro__img">
+            <img src="{% static '/Website/assets/img/erischon_a.png' %}" alt="a picture of Eri Schön" class="intro__img img--portfolio">
         </section>
         
         
         <!-- My services -->
         <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
+            <h2 class="section__title section__title--services">Mes Services</h2>
             <div class="services">
                 <div class="service">
                     <h3>Application Web</h3>
@@ -58,14 +58,14 @@
         
         <!-- My Work -->
         <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">My work</h2>
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+            <h2 class="section__title section__title--work">Mes projets</h2>
+            <p class="section__subtitle section__subtitle--work">Une selection de mon travail</p>
             
             <div class="portfolio">
                 {% for project in projects %}
 
                     <div class="card-container">
-                        <img class="photo" src="{{ project.image.url }}" alt="">
+                        <img class="photo img--portfolio" src="{{ project.image.url }}" alt="">
                 
                         <div class="card-project">
                             <div class="techno-container">                
@@ -80,7 +80,8 @@
                                 <p class="title"><strong>{{ project.title }}</strong></p>
                                 <p class="description">{{ project.description }}</p>
                                 <div class="btn-container">
-                                    <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a>
+                                    {% comment %} <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a> {% endcomment %}
+                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">URL</a>
                                     <a href="{{ project.url_git }}" target="_blank" class="btn my-work--btn">Git</a>
                                 </div>
                             </div>
@@ -98,11 +99,11 @@
             <p class="section__subtitle section__subtitle--about">Développeur basé à Paris, France</p>
             
             <div class="about-me__body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p></p>
+                <p></p>
             </div>
             
-            <img src="{% static '/website/assets/img/erischon_b.png' %}" alt="Jane leaning against a bus" class="about-me__img">
+            <img src="{% static '/website/assets/img/erischon_b.png' %}" alt="Jane leaning against a bus" class="about-me__img img--portfolio">
          </section>
 
         <!-- Footer -->
