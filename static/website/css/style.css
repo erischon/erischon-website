@@ -54,6 +54,7 @@ section {
 .img--portfolio {
     display: block;
     max-width: 100%;
+    max-height: 100%;
 }
 
 strong { font-weight: var(--fw-bold) }
