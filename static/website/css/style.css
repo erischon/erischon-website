@@ -449,6 +449,7 @@ p.description {
     
     .card-container {
         max-width: 800px;
+        max-height: 400px;
         display: flex;
     }
 
@@ -458,6 +459,7 @@ p.description {
     }
     
     .photo {
+        display: block;
         width: 50%;
         height: auto;
         max-height: 100%;
