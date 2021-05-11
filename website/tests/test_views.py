@@ -13,5 +13,6 @@ class WebSiteTestViews(TestCase):
         """ Test that """
         response = self.client.get(self.homepage_url)
 
-        self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'website/home.html')
+        self.assertEquals(response.status_code, 302)
+        # self.assertEquals(response.status_code, 200)
+        # self.assertTemplateUsed(response, 'website/home.html')
