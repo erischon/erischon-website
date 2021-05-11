@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Techno(models.Model):
@@ -11,7 +12,7 @@ class Techno(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=250)
     description = models.CharField(max_length=150)
-    detail = models.TextField()
+    detail = HTMLField()
     image = models.ImageField(upload_to='portfolio/')
     url_project = models.CharField(max_length=250)
     url_git = models.CharField(max_length=250)
