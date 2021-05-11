@@ -1,0 +1,138 @@
+{% extends "portfolio/base.html" %} {% load static %}
+
+{% block seo %}
+
+    <title>Eri Schön - Portfolio</title>
+    
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Eri Schön">
+
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <meta name="twitter:image" content="" />
+    <meta property="twitter:image:alt" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+
+{% endblock %}
+
+{% block content %}
+
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Bonjour, je suis <strong>Eri Schön</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Développeur Web Backend</p>
+            <img src="{% static '/Website/assets/img/erischon_a.png' %}" alt="a picture of Eri Schön" class="intro__img img--portfolio">
+        </section>
+        
+        
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">Mes Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Application Web</h3>
+                    <p>Conception, réalisation et déploiement d’application web Django.</p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>API</h3>
+                    <p>Conception et réalisation d’API REST.</p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>Quality Assurance</h3>
+                    <p>Réalisation de tests unitaires et fonctionnels. Méthodes BDD et TDD.</p>
+                </div> <!-- / service -->
+            </div> <!-- / services -->
+            
+            <a href="#work" class="btn services--btn">My Work</a>
+        </section>
+
+        
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">Mes projets</h2>
+            <p class="section__subtitle section__subtitle--work">Une selection de mon travail</p>
+            
+            <div class="portfolio">
+                {% for project in projects %}
+
+                    <div class="card-container">
+                        <img class="photo img--portfolio" src="{{ project.image.url }}" alt="">
+                
+                        <div class="card-project">
+                            <div class="techno-container">                
+                                <ul class="techno-list">          
+                                    {% for techno in project.techno.all %}
+                                    <li class="techno-item">{{ techno }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                            <div class="content">
+                                <p class="title"><strong>{{ project.title }}</strong></p>
+                                <p class="description">{{ project.description }}</p>
+                                <div class="btn-container">
+                                    {% comment %} <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a> {% endcomment %}
+                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">URL</a>
+                                    <a href="{{ project.url_git }}" target="_blank" class="btn my-work--btn">Git</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </section>
+
+        
+        <!-- About me -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Qui je suis</h2>
+            <p class="section__subtitle section__subtitle--about">Développeur Full Remote</p>
+            
+            <div class="about-me__body">
+                <p></p>
+                <p></p>
+            </div>
+            
+            <img src="{% static '/website/assets/img/erischon_b.png' %}" alt="Jane leaning against a bus" class="about-me__img img--portfolio">
+         </section>
+
+        <!-- Footer -->
+        <section class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:contact@erischon.dev" class="footer__link">contact@erischon.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/ericschonhofen/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com/EriSchon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/erischon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+
+{% endblock %}
+
+
+</body>
+</html>

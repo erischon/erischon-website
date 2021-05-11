@@ -8,6 +8,10 @@ django = "*"
 gunicorn = "*"
 psycopg2 = "*"
 sentry-sdk = "*"
+flake8 = "*"
+django-tinymce = "*"
+selenium = "*"
+pillow = "*"
 
 [dev-packages]
 
