@@ -3,27 +3,33 @@
 {% block content %}
 
 
-        <section class="intro">
-            <h1 class="section__title section__title--intro">
-                <strong>{{ project.title }}</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">{{ project.description }}</p>
-            <img src="{{ project.image.url }}" alt="" class="intro__img">
-        </section>
-        
-        <div class="portfolio-item-individual">
+    <section class="intro">
+        <h1 class="section__title section__title--intro">
+            <strong>{{ project.title }}</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">{{ project.description }}</p>
+        <img src="{{ project.image.url }}" alt="" class="intro__img">
+    </section>
+    
+    <section class="section__project-detail">
+        <h2 class="section__title section__title--project">Détails du projet</h2>
+    
+        <div class="project-item">
             <p>{{ project.detail | safe}}</p>
         </div>
+    </section>
 
-        <section class="project-techno">
-            <ul>
-                {% for techno in project.techno.all %}
-                <li>{{ techno }}</li>
-                {% endfor %}
-            </ul>
-        </section>
+    <section class="section__project-detail project-techno">
+        <ul>
+            {% for techno in project.techno.all %}
+            <li>{{ techno }}</li>
+            {% endfor %}
+        </ul>
+    </section>
 
-        
-        
+    <section class="section__project-detail project-btn">
+        <a href="#" class="btn">Un projet similaire à mettre en place ? Parlons-en !</a>
+    </section>
+ 
 
 {% endblock %}

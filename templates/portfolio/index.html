@@ -37,22 +37,22 @@
             <h2 class="section__title section__title--services">What I do</h2>
             <div class="services">
                 <div class="service">
-                    <h3>Design + Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>Application Web</h3>
+                    <p>Conception, réalisation et déploiement d’application web Django.</p>
                 </div> <!-- / service -->
                 
                 <div class="service">
-                    <h3>E-Commerce</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>API</h3>
+                    <p>Conception et réalisation d’API REST.</p>
                 </div> <!-- / service -->
                 
                 <div class="service">
-                    <h3>WordPress</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>Quality Assurance</h3>
+                    <p>Réalisation de tests unitaires et fonctionnels. Méthodes BDD et TDD.</p>
                 </div> <!-- / service -->
             </div> <!-- / services -->
             
-            <a href="#work" class="btn">My Work</a>
+            <a href="#work" class="btn services--btn">My Work</a>
         </section>
 
         
@@ -80,8 +80,8 @@
                                 <p class="title"><strong>{{ project.title }}</strong></p>
                                 <p class="description">{{ project.description }}</p>
                                 <div class="btn-container">
-                                    <a href="{% url 'project-detail' project.id %}" class="btn">Détail</a>
-                                    <a href="{{ project.url_git }}" target="_blank" class="btn">Git</a>
+                                    <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a>
+                                    <a href="{{ project.url_git }}" target="_blank" class="btn my-work--btn">Git</a>
                                 </div>
                             </div>
                         </div>
