@@ -58,8 +58,8 @@
         
         <!-- My Work -->
         <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">Mes projets</h2>
-            <p class="section__subtitle section__subtitle--work">Une selection de mon travail</p>
+            <h2 class="section__title section__title--work">Mes productions</h2>
+            <p class="section__subtitle section__subtitle--work">Une sélection de mes projets</p>
             
             <div class="portfolio">
                 {% for project in projects %}
@@ -81,8 +81,8 @@
                                 <p class="description">{{ project.description }}</p>
                                 <div class="btn-container">
                                     {% comment %} <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a> {% endcomment %}
-                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">URL</a>
                                     <a href="{{ project.url_git }}" target="_blank" class="btn my-work--btn">Git</a>
+                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">URL</a>
                                 </div>
                             </div>
                         </div>
