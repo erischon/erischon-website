@@ -64,28 +64,32 @@
             <div class="portfolio">
                 {% for project in projects %}
 
-                    <div class="card-container">
-                        <img class="photo img--portfolio" src="{{ project.image.url }}" alt="">
+                    <div class="card__container">
+                        {% comment %} <img class="photo img--portfolio" src="{{ project.image.url }}" alt=""> {% endcomment %}
                 
-                        <div class="card-project">
-                            <div class="techno-container">                
-                                <ul class="techno-list">          
+                        {% comment %} <div class="card-project"> {% endcomment %}
+
+
+                            <div class="card__content">
+                                <p class="card__title"><strong>{{ project.title }}</strong></p>
+                                <p class="description">{{ project.description }}</p>
+
+                            </div>
+
+                            <div class="techno-list">                
+                                <ul>          
                                     {% for techno in project.techno.all %}
                                     <li class="techno-item">{{ techno }}</li>
                                     {% endfor %}
                                 </ul>
                             </div>
 
-                            <div class="content">
-                                <p class="title"><strong>{{ project.title }}</strong></p>
-                                <p class="description">{{ project.description }}</p>
                                 <div class="btn-container">
                                     {% comment %} <a href="{% url 'project-detail' project.id %}" class="btn my-work--btn">Détail</a> {% endcomment %}
                                     <a href="{{ project.url_git }}" target="_blank" class="btn my-work--btn">Git</a>
-                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">URL</a>
+                                    <a href="{{ project.url_project }}" target="_blank" class="btn my-work--btn">Appli</a>
                                 </div>
-                            </div>
-                        </div>
+                        {% comment %} </div> {% endcomment %}
                     </div>
 
                 {% endfor %}
