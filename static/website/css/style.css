@@ -96,7 +96,8 @@ strong { font-weight: var(--fw-bold); }
     text-decoration: none;
 }
 
-.services--btn:hover {
+.services--btn:hover,
+.contact__btn:hover {
     background-color: var(--clr-back-overlay);
 }
 
@@ -398,7 +399,7 @@ p.description {
 
 .footer {
     background: #111;
-    color: var(--clr-secondary);
+    color: var(--clr-on-back);
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
@@ -406,8 +407,9 @@ p.description {
 }
 
 .footer a { 
-    color: inherit;
+    color: var(--clr-secondary);
     text-decoration: none;
+    font-size: 2.75rem;
 }
 
 .footer__link {
@@ -561,9 +563,40 @@ p.description {
 
 }
 
-.contact__form form {
-    width: 50%;
-    background: var(--clr-back-overlay);
-    padding: 2em;
+
+/* CONTACT FORM */
+
+.section__title--contact {
+    color: var(--clr-on-back);
+    margin-bottom: 0.8em 0;
 }
 
+.contact__form form {
+    min-width: 300px;
+    max-width: 600px;
+    background: var(--clr-back-overlay);
+    padding: 2em;
+    margin: 1em;
+}
+
+.contact__form input,
+.contact__form textarea {
+    padding: 1em;
+    font-size: 0.95rem;
+    margin: 1em 0;
+}
+
+.contact__form p {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form ul {
+    display: none;
+}
+
+.contact__form label {
+    color: var(--clr-on-back);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h3);
+}

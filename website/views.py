@@ -18,7 +18,6 @@ def contactView(request):
         
         if form.is_valid():
             content = {
-                'subject': form.cleaned_data['subject'],
                 'from_email': form.cleaned_data['from_email'],
                 'message': form.cleaned_data['message'],
             }
@@ -26,11 +25,12 @@ def contactView(request):
             email = render_to_string(email_template_name, {'content': content})
 
             try:
-                send_mail(subject, email, 'contact@erischon.dev', ['erischon@gmail.com'])
+                send_mail(subject, email, 'contact@erischon.dev', ['contact@erischon.dev'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('contact-success')
-    return render(request, "website/email.html", {'form': form})
+            return redirect('home')
+    return render(request, 'home', {'form': form})
 
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')
+    # return render(request, "website/email.html", {'form': form})
