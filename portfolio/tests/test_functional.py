@@ -1,4 +1,4 @@
-import unittest
+# import unittest
 import os
 
 from django.test import LiveServerTestCase
@@ -10,7 +10,7 @@ class BlogTest(LiveServerTestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
-    
+
     def tearDown(self):
         self.driver.quit()
 

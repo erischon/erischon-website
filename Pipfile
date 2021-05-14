@@ -12,6 +12,7 @@ flake8 = "*"
 django-tinymce = "*"
 selenium = "*"
 pillow = "*"
+coverage = "*"
 
 [dev-packages]
 

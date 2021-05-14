@@ -13,7 +13,7 @@ class PortfolioModelTest(TestCase):
             url_project='http://',
             url_git='http://',
         )
-        # créer une création de tag
+        self.techno = Techno('Django')
 
     def test_title_label_and_max_length(self):
         '''
@@ -26,3 +26,15 @@ class PortfolioModelTest(TestCase):
 
         self.assertEquals(field_label, 'title')
         self.assertEquals(max_length, 250)
+
+    def test_str_project(self):
+        """ """
+        project = self.project
+
+        self.assertEqual(str(project), project.title)
+
+    def test_str_techno(self):
+        """ """
+        techno = self.techno
+
+        self.assertEqual(str(techno), techno.name)

@@ -1,0 +1,15 @@
+{% autoescape off %}
+
+Coucou Moi,
+
+Tu viens de recevoir un message de {{ content.from_email}}.
+
+Le message c'est :
+
+{{ content.message }}
+
+Si tu veux lui envoyer une réponse envois un email :
+
+{{ content.from_email}}
+
+{% endautoescape %}
