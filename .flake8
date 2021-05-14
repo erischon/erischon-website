@@ -1,9 +1,12 @@
 [flake8]
 exclude =
-    */migrations/*,
+    migrations,
     __pycache__,
     manage.py,
-    settings.py
+    settings.py,
+    .venv,
+    htmlcov,
+    core
 
 ignore =
     E501,
