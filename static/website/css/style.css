@@ -551,3 +551,19 @@ p.description {
 .nav__item:hover {
     color: var(--clr-secondary-opacity);
 }
+
+.contact__form {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+}
+
+.contact__form form {
+    width: 50%;
+    background: var(--clr-back-overlay);
+    padding: 2em;
+}
+
