@@ -22,12 +22,15 @@
 
         <header class="nav__container">
             <img src="{% static 'website/assets/img/logo-esdev-fff-40x40-1.png' %}" alt="Eri Schön logo" class="nav__logo">
-            <nav>
-                <ul class="nav_links">
-                    <li class="nav__link"><a href="" class="nav__item">Accueil</a></li>
-                </ul>
-            </nav>
-            <a href="#contact" class="nav__cta"><button class="btn">Contact</button></a>
+            <div class="nav__links-container">
+                <nav>
+                    <ul class="nav__links">
+                        <li class="nav__link"><a href="{% url 'home' %}" class="nav__item">Accueil</a></li>
+                        <!-- <li class="nav__link"><a href="/media/portfolio/cv-eri-schon-1.pdf" class="nav__item" rel="nofollow" target="_blank">CV</a></li> -->
+                    </ul>
+                </nav>
+                <a href="#contact" class="nav__cta"><button class="btn">Contact</button></a>
+            </div>
         </header>
 
         {% block content%}{% endblock %}

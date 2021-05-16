@@ -522,7 +522,7 @@ p.description {
 .nav__cta,
 .nav_button {
     font-family: var(--ff-secondary);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1rem;
     color: var(--clr-secondary);
     text-decoration: none;
@@ -537,13 +537,20 @@ p.description {
     margin: 0 auto;
 }
 
+.nav__links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .nav__links {
     list-style: none;
+    margin-right: 1em;
 }
 
 .nav__link {
     display: inline-block;
-    padding: 0rem 1.1rem; 
+    padding: 0rem 0.5rem;
 }
 
 .nav__item {
@@ -554,6 +561,9 @@ p.description {
     color: var(--clr-secondary-opacity);
 }
 
+
+/* CONTACT FORM */
+
 .contact__form {
     display: flex;
     justify-content: center;
@@ -562,9 +572,6 @@ p.description {
     margin: 0 auto;
 
 }
-
-
-/* CONTACT FORM */
 
 .section__title--contact {
     color: var(--clr-on-back);
