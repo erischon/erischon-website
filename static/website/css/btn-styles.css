@@ -1,0 +1,29 @@
+
+.btn {
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    background: var(--clr-secondary);
+    color: var(--clr-on-prim);
+    border: 2px solid var(--clr-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    margin-right: 1em;
+    outline: none;
+    font-family: var(--ff-secondary);
+}
+
+.btn:hover {
+    background-color: var(--clr-back);
+    color: var(--clr-on-back);
+    border: 2px solid var(--clr-secondary);
+}
+
+.btn:focus,
+.btn:visited,
+.btn:active {
+    text-decoration: none;
+}
