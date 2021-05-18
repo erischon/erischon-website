@@ -47,3 +47,46 @@ a:hover {
 .blog__post--body {
     margin: 1em 0;
 }
+
+.blog__base--container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border: 4px solid yellow;
+}
+
+
+/* POST DETAIL */
+
+.blog__detail--container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* max-width: 800px; */
+
+    border: 4px solid red;
+}
+
+.blog__detail--section {
+    margin-top: 2em;
+    border: 4px solid #fff;
+}
+
+
+.blog__detail--img {
+    max-width: 600px;
+}
+
+.blog__detail--body {
+    margin 0;
+    border: 4px solid #fff;
+}
+
+
+.blog__detail--title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    margin: 0;
+    padding-bottom: 0.25em;
+}
