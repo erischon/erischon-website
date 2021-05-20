@@ -6,7 +6,7 @@
 .nav_button {
     font-family: var(--ff-secondary);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--clr-secondary);
     text-decoration: none;
 }
@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .nav__links {
@@ -33,6 +34,7 @@
 
 .nav__item {
     transition: all 0.3s ease 0s;
+    font-size: var(--fs-little);
 }
 
 .nav__item:hover {
