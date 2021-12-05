@@ -5,16 +5,14 @@
 {% block content %}
   <h1>Mon Blog</h1>
   {% for post in posts %}
-    <h2>
-      <a href="{{ post.get_absolute_url }}">
-        {{ post.title }}
-      </a>
+    <h2 class="blog__post--title">
+      <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
     </h2>
 
-<p class="date">
-      Published {{ post.publish }} by {{ post.author }}
-    </p>
-    {{ post.body|truncatewords:30|safe }}
+    <div class="blog__post--body">
+      {{ post.body|truncatewords:30|safe }}
+    </div>
+  
   {% endfor %}
 
 {% include "../pagination.html" with page=page_obj %}

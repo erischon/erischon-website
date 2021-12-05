@@ -4,21 +4,20 @@
 
 {% block content %}
 
-<img src="{{ post.img_post.url }}" width="100%" alt="">
+  <div class="blog__detail--container">
 
-  <section class="">
-    <h1 class="strong">{{ post.title }}</h1>
-    <p class="date">
-      Published {{ post.publish }} by {{ post.author }}
-    </p>
-  </section>
+    <section class="blog__detail--section">
+      <h1 class="blog__detail--title">{{ post.title }}</h1>
+    </section>
 
-  <section class="section__body">
-    {{ post.body|safe }}
-  </section>
+    <section class="blog__detail--body">
+      {{ post.body|safe }}
+    </section>
 
-  <section>
+    <section>
 
-  </section>
+    </section>
+
+  </div>
 
 {% endblock %}

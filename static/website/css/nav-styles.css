@@ -1,0 +1,42 @@
+/* NAVBAR */
+
+.nav__link,
+.nav__item,
+.nav__cta,
+.nav_button {
+    font-family: var(--ff-secondary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--clr-secondary);
+    text-decoration: none;
+}
+
+.nav__container {
+
+}
+
+.nav__links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav__links {
+    list-style: none;
+    margin-right: 1em;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: 0rem 0.5rem;
+}
+
+.nav__item {
+    transition: all 0.3s ease 0s;
+    font-size: var(--fs-little);
+}
+
+.nav__item:hover {
+    color: var(--clr-secondary-opacity);
+}
